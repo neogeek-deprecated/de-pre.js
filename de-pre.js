@@ -26,9 +26,13 @@
 
     Array.prototype.slice.call(document.querySelectorAll(tag)).forEach(function (obj) {
 
-        var indent = obj.previousSibling.nodeValue.match(/([ \t]*)$/);
+        var indent = obj.previousSibling.nodeValue.match(/([ \t]*)$/),
+            contents = obj.innerText;
 
-        obj.innerText = obj.innerText.replace(new RegExp('(^|\n)' + indent[1], 'g'), '$1');
+        contents = contents.replace(new RegExp('(^|\n)' + indent[1], 'g'), '$1');
+        contents = contents.replace(/^\s+|\s+$/g, '');
+
+        obj.innerText = contents;
 
     });
 
