@@ -1,0 +1,26 @@
+{
+    "name": "de-pre.js",
+    "description": "Removes excess indentation from the contents of pre tags, allowing proper indentation in HTML.",
+    "version": "0.0.1",
+    "main": "de-pre.js",
+    "license": "MIT",
+    "ignore": [
+    ],
+    "keywords": [
+        "pre",
+        "html",
+        "whitespace"
+    ],
+    "authors": [
+        {
+            "name": "Scott Doxey",
+            "email": "hello@scottdoxey.com",
+            "homepage": "http://scottdoxey.com/"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/neogeek/de-pre.js.git"
+    },
+    "private": true
+}
