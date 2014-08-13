@@ -21,7 +21,6 @@ Take for example the following `pre` tag nested inside a `div`:
         "main": "CanvasToVideo.js"
     }
     </pre>
-
 </div>
 ```
 
