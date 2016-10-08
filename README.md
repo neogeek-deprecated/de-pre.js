@@ -1,10 +1,10 @@
-[![](https://api.travis-ci.org/neogeek/de-pre.js.svg)](https://travis-ci.org/neogeek/de-pre.js) [![](https://david-dm.org/neogeek/de-pre.js/dev-status.svg)](https://david-dm.org/neogeek/de-pre.js/#info=devDependencies)
-
-#de-pre.js
+# de-pre.js
 
 > Removes excess indentation from the contents of pre tags, allowing proper indentation in HTML.
 
-##Usage
+[![](https://api.travis-ci.org/neogeek/de-pre.js.svg)](https://travis-ci.org/neogeek/de-pre.js) [![](https://david-dm.org/neogeek/de-pre.js/dev-status.svg)](https://david-dm.org/neogeek/de-pre.js?type=dev)
+
+## Usage
 
 ```javascript
 depre('pre');
@@ -26,7 +26,7 @@ Take for example the following `pre` tag nested inside a `div`:
 
 The contents of the `pre` tag will render like this when viewed in a browser.
 
-```
+```json
     {
         "name": "CanvasToVideo",
         "description": "An experiment in converting Canvas animations to video.",
@@ -36,7 +36,7 @@ The contents of the `pre` tag will render like this when viewed in a browser.
 
 With de-pre.js it will render like this:
 
-```
+```json
 {
     "name": "CanvasToVideo",
     "description": "An experiment in converting Canvas animations to video.",

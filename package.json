@@ -1,18 +1,16 @@
 {
-    "name": "de-pre.js",
-    "description": "Removes excess indentation from the contents of pre tags, allowing proper indentation in HTML.",
-    "version": "0.0.1",
-    "main": "de-pre.js",
-    "devDependencies": {
-        "grunt": "0.4.5",
-        "grunt-contrib-watch": "0.6.1",
-        "grunt-contrib-jasmine": "0.7.0",
-        "grunt-contrib-uglify": "0.5.1",
-        "grunt-jslint": "1.1.12",
-        "grunt-notify": "0.3.1",
-        "matchdep": "0.3.0"
-    },
-    "scripts": {
-        "test": "grunt test"
-    }
+  "name": "de-pre.js",
+  "description": "Removes excess indentation from the contents of pre tags, allowing proper indentation in HTML.",
+  "version": "0.0.2",
+  "main": "de-pre.js",
+  "devDependencies": {
+    "jsdom": "9.6.0",
+    "jsdom-global": "2.1.0",
+    "jslint": "0.10.3",
+    "mocha": "3.1.0"
+  },
+  "scripts": {
+    "test": "jslint de-pre.js && mocha test/**/*.js -r jsdom-global/register"
+  },
+  "private": true
 }

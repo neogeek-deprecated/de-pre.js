@@ -2,7 +2,7 @@
  * de-pre.js
  * https://github.com/neogeek/de-pre.js
  *
- * Copyright (c) 2014 Scott Doxey
+ * Copyright (c) 2016 Scott Doxey
  * Released under the MIT license.
  */
 
@@ -10,30 +10,38 @@
 
     'use strict';
 
-    if (typeof define === 'function' && define.amd !== undefined) {
+    if (typeof define === 'function' && define.amd) {
 
         define([], factory);
 
+    } else if (typeof module === 'object' && module.exports) {
+
+        module.exports = factory();
+
     } else {
 
-        root.depre = factory;
+        root.returnExports = factory();
 
     }
 
-}(this, function (tag) {
+}(this, function () {
 
     'use strict';
 
-    Array.prototype.slice.call(document.querySelectorAll(tag)).forEach(function (obj) {
+    return function (tag) {
 
-        var indent = obj.previousSibling.nodeValue.match(/([ \t]*)$/),
-            contents = obj.innerText;
+        Array.prototype.slice.call(document.querySelectorAll(tag || 'pre')).forEach(function (obj) {
 
-        contents = contents.replace(new RegExp('(^|\n)' + indent[1], 'g'), '$1');
-        contents = contents.replace(/^\s+|\s+$/g, '');
+            var indent = obj.previousSibling.nodeValue.match(/([ \t]*)$/),
+                contents = obj.textContent;
 
-        obj.innerText = contents;
+            contents = contents.replace(new RegExp('(^|\n)' + indent[1], 'g'), '$1');
+            contents = contents.replace(/^\s+|\s+$/g, '');
 
-    });
+            obj.textContent = contents;
+
+        });
+
+    };
 
 }));
