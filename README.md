@@ -1,5 +1,7 @@
 # de-pre.js
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/neogeek/de-pre.js.svg)](https://greenkeeper.io/)
+
 > Removes excess indentation from the contents of pre tags, allowing proper indentation in HTML.
 
 [![](https://api.travis-ci.org/neogeek/de-pre.js.svg)](https://travis-ci.org/neogeek/de-pre.js) [![](https://david-dm.org/neogeek/de-pre.js/dev-status.svg)](https://david-dm.org/neogeek/de-pre.js?type=dev)
