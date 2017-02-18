@@ -2,7 +2,7 @@
  * de-pre.js
  * https://github.com/neogeek/de-pre.js
  *
- * Copyright (c) 2016 Scott Doxey
+ * Copyright (c) 2017 Scott Doxey
  * Released under the MIT license.
  */
 
